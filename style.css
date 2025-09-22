@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  background: #222;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Subtitulo */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+/* Secciones */
+.pelicula {
+  padding: 2rem;
+  background: white;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Íconos píldoras  */
+.juego-matrix .pildora-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 0 15px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  position: relative;
+  border: 2px solid #555;
+  transition: transform 0.3s;
+}
+.juego-matrix .pildora-azul {
+  background: linear-gradient(135deg, #0066ff, #0044aa);
+  border-color: #003366;
+}
+.juego-matrix .pildora-roja {
+  background: linear-gradient(135deg, #ff3333, #aa0000);
+  border-color: #660000;
+}
+.juego-matrix .pildora-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Pantalla  Matrix */
+#pantalla-matrix {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #000;
+  color: #0f0;
+  font-family: monospace;
+  font-size: 18px;
+  overflow: hidden;
+  z-index: 9999;
+  display: none;
+}
+
+/* Animación letras cayendo  Matrix */
+#pantalla-matrix canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Íconos papel y lápiz  */
+.juego-blade .icono {
+  width: 60px;
+  height: 60px;
+  margin: 0 15px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.juego-blade .icono svg {
+  width: 100%;
+  height: 100%;
+  fill: #444;
+  transition: fill 0.3s;
+}
+.juego-blade .icono:hover svg {
+  fill: #007bff;
+  animation: escribir 1.5s infinite;
+}
+
+/* Animación de escritura (parpadeo de línea) */
+@keyframes escribir {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Botones de opciones test */
+#opciones button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #eee;
+  transition: background-color 0.3s;
+}
+#opciones button:hover {
+  background-color: #ddd;
+}
+
+/* Resultado test */
+#resultado-blade {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* Animación de aparición */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.historia {
+  animation: fadeSlideUp 1.5s ease-out;
+}
+
+/* Estilo trailer */
+.trailer {
+  margin-top: 1rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+.trailer a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+.trailer a:hover {
+  text-decoration: underline;
+}

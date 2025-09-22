@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Educativa de Películas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <h1>EduCine</h1>
+    <ul>
+      <li><a href="#matrix">Matrix</a></li>
+      <li><a href="#blade-runner">Blade Runner</a></li>
+    </ul>
+  </nav>
+  <section id="inicio" class="hero">
+    <h2>Bienvenido a EduCine</h2>
+    <p>Explora el mundo del cine mientras aprendes.</p>
+    <p>
+      Esta es una pagina interactiva con mis 2 peliculas favoritas, un poco
+      de historia de ellas, datos curiosos y un pequeño juego para realizar.
+    </p>
+  </section>
+</header>
+
+<main>
+
+  <!-- MATRIX -->
+  <section id="matrix" class="pelicula">
+    <h2>Matrix (1999)</h2>
+    <p class="historia">
+      <strong>Historia:</strong>
+      "Matrix" es un hito de la ciencia ficción dirigido por las hermanas Wachowski. La película
+      nos presenta a Thomas Anderson, un programador de computadoras que vive una doble vida como
+      el hacker "Neo". Neo siente que algo no está bien en el mundo, una sensación que se confirma
+      cuando un grupo de extraños, liderados por el enigmático Morfeo, le contactan. Morfeo le ofrece
+      una pastilla azul para seguir en su ignorancia o una pastilla roja para descubrir la verdad.
+      Neo elige la pastilla roja y despierta en la realidad: el año es 2199 y los humanos son cultivados
+      por máquinas inteligentes, que los mantienen en un mundo de realidad virtual llamado "Matrix"
+      para extraer su energía. La película explora temas de realidad, libre albedrío, destino y la
+      naturaleza de la humanidad.
+    </p>
+
+    <details>
+      <summary>Datos Curiosos</summary>
+      <ul>
+        <li>Inspirada en Ghost in the Shell y Baudrillard.</li>
+        <li>Efecto "Bullet Time" creado para la película.</li>
+        <li>Keanu Reeves entrenó artes marciales durante meses.</li>
+      </ul>
+    </details>
+
+    <!-- Trailer  -->
+    <div class="trailer">
+      <h4>🎬 Trailer</h4>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/OM0tSTEQCQA" 
+        title="Trailer de Matrix" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+    <!-- Juego -->
+    <div class="juego juego-matrix" id="juego-matrix">
+      <h3>Juego: Elige la Píldora</h3>
+      <div>
+        <div class="pildora-icon pildora-azul" title="Píldora Azul"></div>
+        <div class="pildora-icon pildora-roja" title="Píldora Roja"></div>
+      </div>
+      <div id="resultado-matrix" style="margin-top:1rem;"></div>
+    </div>
+
+    <!-- Pantalla con efecto Matrix -->
+    <div id="pantalla-matrix">
+      <canvas id="canvas-matrix"></canvas>
+    </div>
+  </section>
+
+  <!-- BLADE RUNNER -->
+  <section id="blade-runner" class="pelicula">
+    <h2>Blade Runner (1982)</h2>
+    <p class="historia">
+      <strong>Historia:</strong>
+      Dirigida por Ridley Scott y basada en la novela de Philip K. Dick, "¿Sueñan los androides con ovejas eléctricas?",
+      "Blade Runner" es una obra maestra del cine negro y la ciencia ficción. La trama se sitúa en un distópico Los Ángeles
+      en el año 2019, donde replicantes (seres artificiales indistinguibles de los humanos) han sido creados para trabajos
+      peligrosos. Cuando un grupo de replicantes rebeldes de la serie Nexus-6 se escapa a la Tierra, el ex-detective Rick Deckard
+      es forzado a volver a su trabajo como "Blade Runner" para cazarlos y "retirarlos". La película explora la humanidad,
+      la memoria, la identidad y qué significa estar vivo.
+    </p>
+
+    <details>
+      <summary>Datos Curiosos</summary>
+      <ul>
+        <li>Múltiples versiones de la película, incluido el "Final Cut".</li>
+        <li>Estética cyberpunk influyente.</li>
+        <li>Banda sonora icónica de Vangelis.</li>
+      </ul>
+    </details>
+
+    <!-- Trailer -->
+    <div class="trailer">
+      <h4>🎬 Trailer</h4>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eogpIG53Cis" 
+        title="Trailer de Blade Runner" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+    <!-- Juego -->
+    <div class="juego juego-blade" id="juego-blade">
+      <h3>Juego: Test de Voight-Kampff</h3>
+      <div>
+        
+        <div class="icono" id="icono-papel" title="Papel">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="8" width="40" height="48" rx="4" ry="4" fill="#ccc" stroke="#666" stroke-width="2"/>
+            <line x1="20" y1="18" x2="44" y2="18" stroke="#666" stroke-width="2"/>
+            <line x1="20" y1="28" x2="44" y2="28" stroke="#666" stroke-width="2"/>
+            <line x1="20" y1="38" x2="44" y2="38" stroke="#666" stroke-width="2"/>
+            <line x1="20" y1="48" x2="44" y2="48" stroke="#666" stroke-width="2"/>
+          </svg>
+        </div>
+        
+        <div class="icono" id="icono-lapiz" title="Lápiz">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 52 L22 62 L52 32 L42 22 Z" fill="#aaa" stroke="#666" stroke-width="2"/>
+            <path d="M42 22 L46 18 L54 26 L50 30 Z" fill="#555" stroke="#333" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+      <div id="pregunta" style="margin-top: 1rem; font-weight: bold;"></div>
+      <div id="opciones"></div>
+      <div id="resultado-blade"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Valentin Moran - Todos los derechos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
